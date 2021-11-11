@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="RenameFilesByType.1c6933a4-6111-43af-acf0-337e4b65d75d" Version="1.0" Language="en-US" Publisher="prasanth reddy" />
+    <Identity Id="RenameFilesByType.dae14753-85d9-4dc3-a347-62b77c7b1efe" Version="1.0" Language="en-US" Publisher="prasanth reddy" />
     <DisplayName>RenameFilesByType</DisplayName>
     <Description>Empty VSIX Project.</Description>
   </Metadata>
