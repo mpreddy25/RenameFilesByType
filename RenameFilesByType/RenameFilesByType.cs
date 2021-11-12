@@ -137,13 +137,29 @@ namespace RenameFilesByType
                 try
                 {
                     var typeName = GetTypeNameFromSourceType(sourceType);
+                    var fileNameParts = fi.Name.Split('.');
+
+                    if(typeName == fileNameParts[0])
+                    {
+                        return;
+                    }
+
+                    var hasPartialIdentifier = sourceType.Modifiers.Any(m => m.Text == "partial");
                     try
                     {
-                        fi.MoveTo(Path.Combine(fi.DirectoryName, typeName + fi.Extension));
+                        if (hasPartialIdentifier)
+                        {
+                            var fileNameSuffix = fileNameParts.Length > 2 ? "." + String.Join("", fileNameParts, 1, fileNameParts.Length - 2) : String.Empty;
+                            fi.MoveTo(Path.Combine(fi.DirectoryName, typeName + fileNameSuffix + fi.Extension));
+                        }
+                        else
+                        {
+                            fi.MoveTo(Path.Combine(fi.DirectoryName, typeName + fi.Extension));
+                        }
                     }
                     catch(Exception)
                     {
-                        fi.MoveTo(Path.Combine(fi.DirectoryName, typeName+ "."+ Guid.NewGuid().ToString().Substring(0,3) + fi.Extension));
+                        fi.MoveTo(Path.Combine(fi.DirectoryName, typeName+ "."+ Guid.NewGuid().ToString().Substring(0,5) + fi.Extension));
                     }
                 }
                 catch (InvalidDataException)
