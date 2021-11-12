@@ -2,7 +2,7 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
 	<Metadata>
 		<Identity Id="RenameFilesByType.dae14753-85d9-4dc3-a347-62b77c7b1efe" Version="1.0.1" Language="en-US" Publisher="Prasanth Reddy Maddala" />
-		<DisplayName>RenameFilesByType</DisplayName>
+		<DisplayName>Rename Files By Type</DisplayName>
 		<Description xml:space="preserve">Rename all files in a folder by type.</Description>
 	</Metadata>
 	<Installation>
